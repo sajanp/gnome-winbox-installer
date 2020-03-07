@@ -1,0 +1,20 @@
+#!/bin/bash
+
+sudo dnf install wine wget curl
+
+mkdir -p /home/sajan.parikh/.local/exe
+mkdir -p /home/sajan.parikh/.local/bin
+mkdir -p /home/sajan.parikh/.local/share/applications
+mkdir -p /home/sajan.parikh/.local/share/icons/hicolor
+
+cp winbox.desktop /home/sajan.parikh/.local/share/applications/
+cp winbox /home/sajan.parikh/.local/bin/
+
+chmod +x /home/sajan.parikh/local/bin/winbox
+
+wget https://mt.lv/winbox64 -O /home/sajan.parikh/.local/exe/winbox64.exe
+
+for size in $( ls -1 icons/winbox-*.png | cut -d\- -f2 | cut -d\. -f1 | paste -sd ' ') ; do
+	mkdir -p /home/sajan.parikh/.local/share/icons/hicolor/${size}/apps/
+	cp -f icons/winbox-${size}.png /home/sajan.parikh/.local/share/icons/hicolor/${size}/apps/winbox.png
+done

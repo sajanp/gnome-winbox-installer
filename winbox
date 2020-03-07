@@ -1,0 +1,2 @@
+#! /bin/bash
+FREETYPE_PROPERTIES="truetype:interpreter-version=35" wine /home/sajan.parikh/.local/exe/winbox64.exe

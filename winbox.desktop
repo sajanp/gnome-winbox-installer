@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Winbox
+GenericName=RouterOS Configuration Utility
+Comment=RouterOS Configuration Utility
+Exec=/home/sajan.parikh/.local/bin/winbox
+Icon=winbox
+Terminal=false
+Type=Application
+StartupNotify=true
+StartupWMClass=winbox.exe
+Categories=Network;RemoteAccess;
+Keywords=mikrotik;winbox;routeros;
